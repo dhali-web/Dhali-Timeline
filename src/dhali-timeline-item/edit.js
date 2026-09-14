@@ -10,7 +10,7 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -19,7 +19,7 @@ import { useBlockProps } from "@wordpress/block-editor";
  */
 import "./editor.scss";
 
-const TEMPLATE = [["core/group", {}, [["core/column"], ["core/column"]]]];
+const TEMPLATE = [["core/columns", {}, [["core/column"], ["core/column"]]]];
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -30,9 +30,10 @@ const TEMPLATE = [["core/group", {}, [["core/column"], ["core/column"]]]];
  * @return {Element} Element to render.
  */
 export default function Edit() {
+	const blockProps = useBlockProps({ className: "dh-timeline-item" });
 	return (
-		<p {...useBlockProps()}>
-			{__("Dhali Timeline – hello from the editor!", "dhali-timeline")}
-		</p>
+		<div {...blockProps}>
+			<InnerBlocks template={TEMPLATE} templateLock={true} />
+		</div>
 	);
 }
