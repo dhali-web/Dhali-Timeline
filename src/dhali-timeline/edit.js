@@ -10,7 +10,7 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -27,7 +27,7 @@ const TEMPLATE = [
 				type: "constrained",
 			},
 		},
-		[["dhali/timeline-list"]],
+		[["dhali-timeline/dh-timeline-list"]],
 	],
 ];
 
@@ -40,9 +40,10 @@ const TEMPLATE = [
  * @return {Element} Element to render.
  */
 export default function Edit() {
+	const blockProps = useBlockProps({ className: "dh-timeline" });
 	return (
-		<p {...useBlockProps()}>
-			{__("Dhali Timeline – hello from the editor!", "dhali-timeline")}
-		</p>
+		<div {...blockProps}>
+			<InnerBlocks template={TEMPLATE} templateLock="all" />
+		</div>
 	);
 }

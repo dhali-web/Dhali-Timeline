@@ -1,21 +1,19 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/dhali-timeline-item",
-	"version": "0.1.0",
+	"name": "dhali-timeline/dh-timeline-item",
 	"title": "Dhali Timeline",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Dhali block to make a timeline with columns.",
 	"example": {},
 	"supports": {
-		"html": false,
-		"align": ["wide", "full"]
+		"html": false
 	},
 	"textdomain": "dhali-timeline",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
-	"viewScript": "file:./view.js"
+	"parent": ["dhali-timeline/dh-timeline-list"]
 }

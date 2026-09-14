@@ -12,11 +12,11 @@
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'dhali-timeline-section',
+		'class' => 'dh-timeline-section',
 	)
 );
 ?>
 
-<section <?php echo $wrapper_attributes; ?>>
-	<?php echo $content; ?>
+<section <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput ?>>
+	<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput ?>
 </section>

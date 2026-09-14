@@ -19,17 +19,7 @@ import { useBlockProps } from "@wordpress/block-editor";
  */
 import "./editor.scss";
 
-const TEMPLATE = [
-	[
-		"core/group",
-		{
-			layout: {
-				type: "constrained",
-			},
-		},
-		[["dhali/timeline-list"]],
-	],
-];
+const TEMPLATE = [["core/group", {}, [["core/column"], ["core/column"]]]];
 
 /**
  * The edit function describes the structure of your block in the context of the
