@@ -12,7 +12,7 @@
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'dh-timeline',
+		'class' => 'dh-timeline-list',
 	)
 );
 ?>

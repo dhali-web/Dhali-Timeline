@@ -130,11 +130,6 @@ $timeline-transition-easing: ease;
 		z-index: 2;
 	}
 
-	// Alternate every second item.
-	&:nth-child(even) > .wp-block-columns {
-		flex-direction: row-reverse;
-	}
-
 	// Timeline marker.
 	&::before {
 		@include timeline-marker;
@@ -178,9 +173,9 @@ $timeline-transition-easing: ease;
 			display: none;
 		}
 
-		// > .wp-block-columns,
-		// &:nth-child(even) > .wp-block-columns {
-		// 	flex-direction: column;
-		// }
+		> .wp-block-columns,
+		&:nth-child(even) > .wp-block-columns {
+			flex-direction: column;
+		}
 	}
 }
