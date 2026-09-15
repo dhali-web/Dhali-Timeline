@@ -5,12 +5,24 @@
  */
 import { __ } from "@wordpress/i18n";
 /**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
+ * Provides block editor components and hooks used to define block structure
+ * and add controls to the WordPress editor.
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/
  */
-import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
+import {
+	useBlockProps,
+	InnerBlocks,
+	InspectorControls,
+	useSettings,
+} from "@wordpress/block-editor";
+/**
+ * Provides reusable WordPress UI components for building block controls
+ * such as panels, range sliders, select fields, and toggle switches.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/
+ */
+import { PanelBody, RangeControl, ColorPalette } from "@wordpress/components";
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -39,11 +51,60 @@ const TEMPLATE = [
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
+	const {
+		lineThickness,
+		markerSize,
+		activeLineColor,
+		inactiveLineColor,
+		activeMarkerColor,
+		inactiveMarkerColor,
+	} = attributes;
+	const [themePalette] = useSettings("color.palette.theme");
 	const blockProps = useBlockProps({ className: "dh-timeline" });
 	return (
-		<div {...blockProps}>
-			<InnerBlocks template={TEMPLATE} templateLock="all" />
-		</div>
+		<>
+			<InspectorControls>
+				<PanelBody title={__("Timeline Settings", "dhali-timeline")}>
+					<RangeControl
+						label={__("Line Thickness", "dhali-timeline")}
+						value={lineThickness}
+						min={1}
+						max={100}
+						onChange={(value) => setAttributes({ lineThickness: value })}
+					/>
+					<RangeControl
+						label={__("Marker Size", "dhali-timeline")}
+						value={markerSize}
+						min={1}
+						max={100}
+						onChange={(value) => setAttributes({ markerSize: value })}
+					/>
+					<ColorPalette
+						colors={themePalette ?? []}
+						value={activeLineColor}
+						onChange={(value) => setAttributes({ activeLineColor: value })}
+					/>
+					<ColorPalette
+						colors={themePalette ?? []}
+						value={inactiveLineColor}
+						onChange={(value) => setAttributes({ inactiveLineColor: value })}
+					/>
+					<ColorPalette
+						colors={themePalette ?? []}
+						value={activeMarkerColor}
+						onChange={(value) => setAttributes({ activeMarkerColor: value })}
+					/>
+					<ColorPalette
+						colors={themePalette ?? []}
+						value={inactiveMarkerColor}
+						onChange={(value) => setAttributes({ inactiveMarkerColor: value })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<div {...blockProps}>
+				<InnerBlocks template={TEMPLATE} templateLock="all" />
+			</div>
+		</>
 	);
 }

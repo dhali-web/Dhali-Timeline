@@ -8,6 +8,14 @@
 	"icon": "smiley",
 	"description": "Dhali block to make a timeline with columns.",
 	"example": {},
+	"attributes": {
+		"lineThickness": { "type": "number", "default": "2" },
+		"markerSize": { "type": "number", "default": "2" },
+		"activeLineColor": { "type": "string", "default": "Primary" },
+		"inactiveLineColor": { "type": "string", "default": "Primary" },
+		"activeMarkerColor": { "type": "string", "default": "Primary" },
+		"inactiveMarkerColor": { "type": "string", "default": "Primary" }
+	},
 	"supports": {
 		"html": false,
 		"align": ["wide", "full"]
