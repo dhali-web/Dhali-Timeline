@@ -19,11 +19,7 @@ import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
  */
 import "./editor.scss";
 
-const TEMPLATE = [
-	["dhali-timeline/dh-timeline-item"],
-	["dhali-timeline/dh-timeline-item"],
-	["dhali-timeline/dh-timeline-item"],
-];
+const TEMPLATE = [["dhali-timeline/dh-timeline-item"]];
 
 /**
  * The edit function describes the structure of your block in the context of the
