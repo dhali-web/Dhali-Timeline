@@ -90,26 +90,36 @@ export default function Edit({ attributes, setAttributes }) {
 						max={100}
 						onChange={(value) => setAttributes({ markerSize: value })}
 					/>
-					<ColorPalette
-						colors={themePalette ?? []}
-						value={activeLineColor}
-						onChange={(value) => setAttributes({ activeLineColor: value })}
-					/>
-					<ColorPalette
-						colors={themePalette ?? []}
-						value={inactiveLineColor}
-						onChange={(value) => setAttributes({ inactiveLineColor: value })}
-					/>
-					<ColorPalette
-						colors={themePalette ?? []}
-						value={activeMarkerColor}
-						onChange={(value) => setAttributes({ activeMarkerColor: value })}
-					/>
-					<ColorPalette
-						colors={themePalette ?? []}
-						value={inactiveMarkerColor}
-						onChange={(value) => setAttributes({ inactiveMarkerColor: value })}
-					/>
+					<BaseControl label={__("Active Line Color", "dhali-timeline")}>
+						<ColorPalette
+							colors={themePalette ?? []}
+							value={activeLineColor}
+							onChange={(value) => setAttributes({ activeLineColor: value })}
+						/>
+					</BaseControl>
+					<BaseControl label={__("Inctive Line Color", "dhali-timeline")}>
+						<ColorPalette
+							colors={themePalette ?? []}
+							value={inactiveLineColor}
+							onChange={(value) => setAttributes({ inactiveLineColor: value })}
+						/>
+					</BaseControl>
+					<BaseControl label={__("Active Marker Color", "dhali-timeline")}>
+						<ColorPalette
+							colors={themePalette ?? []}
+							value={activeMarkerColor}
+							onChange={(value) => setAttributes({ activeMarkerColor: value })}
+						/>
+					</BaseControl>
+					<BaseControl label={__("Inactive Marker Color", "dhali-timeline")}>
+						<ColorPalette
+							colors={themePalette ?? []}
+							value={inactiveMarkerColor}
+							onChange={(value) =>
+								setAttributes({ inactiveMarkerColor: value })
+							}
+						/>
+					</BaseControl>
 				</PanelBody>
 			</InspectorControls>
 			<div {...blockProps}>
