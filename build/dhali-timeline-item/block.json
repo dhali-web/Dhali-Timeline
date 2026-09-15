@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "dhali-timeline/dh-timeline-item",
-  "title": "Dhali Timeline",
+  "title": "Timeline Item",
   "category": "widgets",
   "icon": "smiley",
   "description": "Dhali block to make a timeline with columns.",

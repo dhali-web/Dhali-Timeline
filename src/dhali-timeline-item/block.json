@@ -15,5 +15,6 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
-	"parent": ["dhali-timeline/dh-timeline-list"]
+	"parent": ["dhali-timeline/dh-timeline-list"],
+	"allowedBlocks": ["core/columns"]
 }
