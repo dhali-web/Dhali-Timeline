@@ -16,11 +16,11 @@ return array(
 		'attributes' => array(
 			'lineThickness' => array(
 				'type' => 'number',
-				'default' => '2'
+				'default' => 2
 			),
 			'markerSize' => array(
 				'type' => 'number',
-				'default' => '2'
+				'default' => 2
 			),
 			'activeLineColor' => array(
 				'type' => 'string',

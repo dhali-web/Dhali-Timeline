@@ -11,11 +11,11 @@
   "attributes": {
     "lineThickness": {
       "type": "number",
-      "default": "2"
+      "default": 2
     },
     "markerSize": {
       "type": "number",
-      "default": "2"
+      "default": 2
     },
     "activeLineColor": {
       "type": "string",
