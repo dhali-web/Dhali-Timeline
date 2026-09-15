@@ -61,7 +61,17 @@ export default function Edit({ attributes, setAttributes }) {
 		inactiveMarkerColor,
 	} = attributes;
 	const [themePalette] = useSettings("color.palette.theme");
-	const blockProps = useBlockProps({ className: "dh-timeline" });
+	const blockProps = useBlockProps({
+		className: "dh-timeline",
+		style: {
+			"--dh-timeline-line-width": `${lineThickness}px`,
+			"--dh-timeline-marker-size": `${markerSize}px`,
+			"--dh-timeline-active-color": activeLineColor,
+			"--dh-timeline-track-color": inactiveLineColor,
+			"--dh-timeline-marker-active-color": activeMarkerColor,
+			"--dh-timeline-marker-color": inactiveMarkerColor,
+		},
+	});
 	return (
 		<>
 			<InspectorControls>
