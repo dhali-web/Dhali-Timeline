@@ -16,27 +16,27 @@ return array(
 		'attributes' => array(
 			'lineThickness' => array(
 				'type' => 'number',
-				'default' => 2
+				'default' => 8
 			),
 			'markerSize' => array(
 				'type' => 'number',
-				'default' => 2
+				'default' => 20
 			),
 			'activeLineColor' => array(
 				'type' => 'string',
-				'default' => 'Primary'
+				'default' => '#fff'
 			),
 			'inactiveLineColor' => array(
 				'type' => 'string',
-				'default' => 'Primary'
+				'default' => '#000'
 			),
 			'activeMarkerColor' => array(
 				'type' => 'string',
-				'default' => 'Primary'
+				'default' => '#fff'
 			),
 			'inactiveMarkerColor' => array(
 				'type' => 'string',
-				'default' => 'Primary'
+				'default' => '#000'
 			)
 		),
 		'supports' => array(

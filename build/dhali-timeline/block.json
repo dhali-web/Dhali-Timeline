@@ -11,27 +11,27 @@
   "attributes": {
     "lineThickness": {
       "type": "number",
-      "default": 2
+      "default": 8
     },
     "markerSize": {
       "type": "number",
-      "default": 2
+      "default": 20
     },
     "activeLineColor": {
       "type": "string",
-      "default": "Primary"
+      "default": "#fff"
     },
     "inactiveLineColor": {
       "type": "string",
-      "default": "Primary"
+      "default": "#000"
     },
     "activeMarkerColor": {
       "type": "string",
-      "default": "Primary"
+      "default": "#fff"
     },
     "inactiveMarkerColor": {
       "type": "string",
-      "default": "Primary"
+      "default": "#000"
     }
   },
   "supports": {
