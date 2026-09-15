@@ -11,10 +11,10 @@
 	"attributes": {
 		"lineThickness": { "type": "number", "default": 8 },
 		"markerSize": { "type": "number", "default": 20 },
-		"activeLineColor": { "type": "string", "default": "#fff" },
-		"inactiveLineColor": { "type": "string", "default": "#000" },
-		"activeMarkerColor": { "type": "string", "default": "#fff" },
-		"inactiveMarkerColor": { "type": "string", "default": "#000" }
+		"activeLineColor": { "type": "string" },
+		"inactiveLineColor": { "type": "string" },
+		"activeMarkerColor": { "type": "string" },
+		"inactiveMarkerColor": { "type": "string" }
 	},
 	"supports": {
 		"html": false,

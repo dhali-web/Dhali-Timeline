@@ -18,20 +18,16 @@
       "default": 20
     },
     "activeLineColor": {
-      "type": "string",
-      "default": "#fff"
+      "type": "string"
     },
     "inactiveLineColor": {
-      "type": "string",
-      "default": "#000"
+      "type": "string"
     },
     "activeMarkerColor": {
-      "type": "string",
-      "default": "#fff"
+      "type": "string"
     },
     "inactiveMarkerColor": {
-      "type": "string",
-      "default": "#000"
+      "type": "string"
     }
   },
   "supports": {

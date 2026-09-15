@@ -33,7 +33,11 @@ export default function Edit() {
 	const blockProps = useBlockProps({ className: "dh-timeline-item" });
 	return (
 		<div {...blockProps}>
-			<InnerBlocks template={TEMPLATE} templateLock={false} />
+			<InnerBlocks
+				template={TEMPLATE}
+				templateLock={false}
+				renderAppender={false}
+			/>
 		</div>
 	);
 }

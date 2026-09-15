@@ -23,20 +23,16 @@ return array(
 				'default' => 20
 			),
 			'activeLineColor' => array(
-				'type' => 'string',
-				'default' => '#fff'
+				'type' => 'string'
 			),
 			'inactiveLineColor' => array(
-				'type' => 'string',
-				'default' => '#000'
+				'type' => 'string'
 			),
 			'activeMarkerColor' => array(
-				'type' => 'string',
-				'default' => '#fff'
+				'type' => 'string'
 			),
 			'inactiveMarkerColor' => array(
-				'type' => 'string',
-				'default' => '#000'
+				'type' => 'string'
 			)
 		),
 		'supports' => array(
