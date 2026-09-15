@@ -77,6 +77,9 @@ return array(
 		'render' => 'file:./render.php',
 		'parent' => array(
 			'dhali-timeline/dh-timeline-list'
+		),
+		'allowedBlocks' => array(
+			'core/columns'
 		)
 	),
 	'dhali-timeline-list' => array(
