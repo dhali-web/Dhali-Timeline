@@ -113,7 +113,11 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 			<div {...blockProps}>
-				<InnerBlocks template={TEMPLATE} templateLock="all" />
+				<InnerBlocks
+					template={TEMPLATE}
+					templateLock="all"
+					renderAppender={false}
+				/>
 			</div>
 		</>
 	);
